@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  user-select: none;
 }
 :root {
   --primary-purple: hsl(259, 100%, 65%);
@@ -26,8 +27,8 @@ body {
 }
 
 .card {
-  width: 640px;
-  height: 500px;
+  width: 620px;
+  height: 520px;
   background-color: white;
   border-radius: 1.15rem;
   border-bottom-right-radius: 10rem;
@@ -67,7 +68,7 @@ body {
 }
 
 .input-box.err .msg {
-  display: block;
+  visibility: visible;
 }
 
 .input-box input {
@@ -90,12 +91,13 @@ body {
   color: var(--off-black);
   font-weight: 800;
   font-style: italic;
-  font-size: 5rem;
+  font-size: 4.5rem;
   line-height: 5.25rem;
 }
 .result span {
   color: var(--primary-purple);
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.5rem;
+  margin-right: 0.5rem;
 }
 .line {
   position: relative;
@@ -123,8 +125,20 @@ body {
 }
 
 .msg {
-  display: none;
+  visibility: hidden;
   font-size: 0.65rem;
   font-style: italic;
   color: var(--secondary-red);
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 500px;
+    height: 560px;
+  }
+  .icon {
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 }

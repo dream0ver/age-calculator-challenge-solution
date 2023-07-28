@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Frontend Mentor | Age calculator app</title>
+    <title>Age calculator app</title>
     <link rel="stylesheet" href="./style.css" />
+    <script type="module" defer>
+      import { onLoad } from "./script.js"
+      window.addEventListener("load", onLoad)
+    </script>
   </head>
   <body>
     <section class="card">
@@ -10,29 +14,27 @@
         <div id="day_input" class="input-box">
           <label>day</label>
           <input type="text" maxlength="2" placeholder="DD" />
-          <span class="msg"></span>
+          <span class="msg">msg</span>
         </div>
         <div id="month_input" class="input-box">
           <label>month</label>
           <input type="text" maxlength="2" placeholder="MM" />
-          <span class="msg"></span>
+          <span class="msg">msg</span>
         </div>
         <div id="year_input" class="input-box">
           <label>year</label>
           <input type="text" maxlength="4" placeholder="YYYY" />
-          <span class="msg"></span>
+          <span class="msg">msg</span>
         </div>
       </div>
       <div class="line">
-        <div class="icon"></div>
+        <i class="icon" id="calculate_button"></i>
       </div>
-      <div class="result">
+      <div id="result" class="result">
         <h1><span>--</span>years</h1>
         <h1><span>--</span>months</h1>
         <h1><span>--</span>days</h1>
       </div>
     </section>
-
-    <script src="./script.js" defer />
   </body>
 </html>
